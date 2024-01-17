@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+      margin: 0;
+    }
+
+    .interactive-button {
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .interactive-button:hover {
+      background-color: #2980b9;
+    }
+
+    .interactive-button:active {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <button class="interactive-button" onclick="expandAndChangeColor()">Click me</button>
+
+  <script>
+    function expandAndChangeColor() {
+      const button = document.querySelector('.interactive-button');
+      button.style.backgroundColor = '#e74c3c';
+      setTimeout(() => {
+        button.style.width = '200px';
+        button.style.transition = 'width 0.3s';
+      }, 0);
+    }
+  </script>
+</body>
+</html>
